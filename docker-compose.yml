@@ -1,0 +1,12 @@
+services:
+  ece-750-mental-wellness-app:
+    image: ece-750-mental-wellness-app
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      ENV: development
+    ports:
+        - "5000:5000"
+    restart: on-failure
+    container_name: ece-750-mental-wellness-app
